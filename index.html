@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/icons/evropa.ico">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-wrapper container">
+                <h1>
+                    European Union</h1>
+            </div>
+            
+        </header>
+        <main>
+            <div class="info-wrapper">
+                <div class="btns-level">
+                    <button type="submit" class="btn-level" data-level='1'>Very Easy</button>
+                    <button type="submit" class="btn-level" data-level='7'>Easy</button>
+                    <button type="submit" class="btn-level" data-level='14'>Medium</button>
+                    <button type="submit" class="btn-level" data-level='20'>Hard</button>
+                    <button type="submit" class="btn-level" data-level='27'>Very Hard</button>
+                </div>
+                <div class="btns">
+                    <button type="submit" class="btn btn-history">Last games</button>
+                    <button type="submit" class="btn btn-new">New game</button>
+                </div>
+                <div class="last-games-wrapper">
+                    <div class="last-games">
+                        
+                    </div>
+                    <button type="submit" class="skip">Skip</button>
+                </div>
+
+                <div class="win-wrapper">
+                    <div class="win">
+                        <span> Congratulations!<br>You moves</span>
+                        <span class="score-game" id="score"></span>
+                        <span>New game?</span>
+                        <div class="switch-actions" id="switchActions">
+                            <button type="submit" class="switch" data-solution="yes">Yes</button>
+                            <button type="submit" class="switch" data-solution="no">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="memory-game">
+                <div class="card" data-name="aut">
+                    <img class="front-face" src="./assets/img/aut.png" alt="aut">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="bel">
+                    <img class="front-face" src="./assets/img/bel.png" alt="bel">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="bul">
+                    <img class="front-face" src="./assets/img/bul.png" alt="bul">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="cro">
+                    <img class="front-face" src="./assets/img/cro.png" alt="cro">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="cyp">
+                    <img class="front-face" src="./assets/img/cyp.png" alt="cyp">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="cze">
+                    <img class="front-face" src="./assets/img/cze.png" alt="cze">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="den">
+                    <img class="front-face" src="./assets/img/den.png" alt="den">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="esp">
+                    <img class="front-face" src="./assets/img/esp.png" alt="esp">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="est">
+                    <img class="front-face" src="./assets/img/est.png" alt="est">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="fin">
+                    <img class="front-face" src="./assets/img/fin.png" alt="fin">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="fra">
+                    <img class="front-face" src="./assets/img/fra.png" alt="fra">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ger">
+                    <img class="front-face" src="./assets/img/ger.png" alt="ger">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="gre">
+                    <img class="front-face" src="./assets/img/gre.png" alt="gre">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="hun">
+                    <img class="front-face" src="./assets/img/hun.png" alt="hun">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="irl">
+                    <img class="front-face" src="./assets/img/irl.png" alt="irl">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ita">
+                    <img class="front-face" src="./assets/img/ita.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="lat">
+                    <img class="front-face" src="./assets/img/lat.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ltu">
+                    <img class="front-face" src="./assets/img/ltu.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="lux">
+                    <img class="front-face" src="./assets/img/lux.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="mlt">
+                    <img class="front-face" src="./assets/img/mlt.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ned">
+                    <img class="front-face" src="./assets/img/ned.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="pl">
+                    <img class="front-face" src="./assets/img/pl.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="por">
+                    <img class="front-face" src="./assets/img/por.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="rou">
+                    <img class="front-face" src="./assets/img/rou.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="slo">
+                    <img class="front-face" src="./assets/img/slo.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="svk">
+                    <img class="front-face" src="./assets/img/svk.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="swe">
+                    <img class="front-face" src="./assets/img/swe.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="aut">
+                    <img class="front-face" src="./assets/img/aut.png" alt="aut">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="bel">
+                    <img class="front-face" src="./assets/img/bel.png" alt="bel">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="bul">
+                    <img class="front-face" src="./assets/img/bul.png" alt="bul">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="cro">
+                    <img class="front-face" src="./assets/img/cro.png" alt="cro">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="cyp">
+                    <img class="front-face" src="./assets/img/cyp.png" alt="cyp">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="cze">
+                    <img class="front-face" src="./assets/img/cze.png" alt="cze">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="den">
+                    <img class="front-face" src="./assets/img/den.png" alt="den">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="esp">
+                    <img class="front-face" src="./assets/img/esp.png" alt="esp">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="est">
+                    <img class="front-face" src="./assets/img/est.png" alt="est">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="fin">
+                    <img class="front-face" src="./assets/img/fin.png" alt="fin">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="fra">
+                    <img class="front-face" src="./assets/img/fra.png" alt="fra">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ger">
+                    <img class="front-face" src="./assets/img/ger.png" alt="ger">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="gre">
+                    <img class="front-face" src="./assets/img/gre.png" alt="gre">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="hun">
+                    <img class="front-face" src="./assets/img/hun.png" alt="hun">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="irl">
+                    <img class="front-face" src="./assets/img/irl.png" alt="irl">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ita">
+                    <img class="front-face" src="./assets/img/ita.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="lat">
+                    <img class="front-face" src="./assets/img/lat.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ltu">
+                    <img class="front-face" src="./assets/img/ltu.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="lux">
+                    <img class="front-face" src="./assets/img/lux.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="mlt">
+                    <img class="front-face" src="./assets/img/mlt.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="ned">
+                    <img class="front-face" src="./assets/img/ned.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="pl">
+                    <img class="front-face" src="./assets/img/pl.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="por">
+                    <img class="front-face" src="./assets/img/por.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="rou">
+                    <img class="front-face" src="./assets/img/rou.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="slo">
+                    <img class="front-face" src="./assets/img/slo.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="svk">
+                    <img class="front-face" src="./assets/img/svk.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+                <div class="card" data-name="swe">
+                    <img class="front-face" src="./assets/img/swe.png" alt="Aurelia">
+                    <img class="back-face" src="./assets/img/evropa.png" alt="Memory Card">
+                </div>
+            </section>
+            <div class="full-name-contries">
+
+            </div>
+        </main>
+    </div>
+        <footer class=" footer">
+            <div class="footer-wrapper container">
+                <div class="footer-start">
+                    <span>
+                        &#169;
+                    </span>
+                    <span class="fonts-footer">
+                        2022
+                    </span>
+                    <a class="footer-link" href="https://github.com/Plohotski/" target="_blank">
+                        <img class="git" src="./assets/svg/vc-git_icon-icons.com_50729.ico" alt="git">
+                    </a>
+                </div>
+                <div class="footer-middle">
+                    <a  class="footer-link" href="https://rs.school/js-stage0/" target="_blank">
+                        <img class="rss-school" src="./assets/svg/rss.svg" alt="rs_school">
+                    </a>
+                </div>
+            </div>    
+        </footer>
+    
+<script src="./index.js"></script>
+</body>    
+</html>
